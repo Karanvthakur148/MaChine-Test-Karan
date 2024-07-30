@@ -95,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(
               onPressed: () {
                 exitAppDialog(context, () {
-                  logOut().then((value) => Navigator.of(context, rootNavigator: true).pop());
+                  logOut();
                 });
               },
               icon: Icon(Icons.logout)),

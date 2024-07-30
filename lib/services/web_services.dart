@@ -137,6 +137,7 @@ class WebService {
     print(jsonResponse);
     if (jsonResponse["status"] == true) {
       SharedPreferences preferences = await SharedPreferences.getInstance();
+      Navigator.of(context, rootNavigator: true).pop();
       preferences.clear();
       Fluttertoast.showToast(msg: jsonResponse["message"]);
       final route = MaterialPageRoute(builder: (context) => AuthScreen());
